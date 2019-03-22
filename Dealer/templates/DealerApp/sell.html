@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'DealerApp/base.html'%}
+{% load staticfiles %}
+
+
+
+{% block content %}
+
+
+<div class="container" align="center">
+<h1 id="sd">Sell Your Vehicle & Get Best Price!</h1>
+<form  method="post"  enctype="multipart/form-data">
+
+{{form.as_p}}
+{% csrf_token %}
+<!-- <input type="file" name="myfile"> -->
+
+<button id="button" type="submit" name="button" class="btn btn-danger btn-outline btn-lg">Drop Here</button>
+</form>
+
+
+<!-- {% if uploaded_file_url %}
+  <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+{% endif %} -->
+
+
+</div>
+
+
+
+
+{% endblock %}
